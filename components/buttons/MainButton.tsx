@@ -15,7 +15,7 @@ export default function MainButton({
       <button
         className={`${
           styles[type!]
-        } h-[46px] px-[16px] rounded-[8px] w-fit min-w-[110px] text-[14px] cursor-pointer mx-[8px]`}
+        } h-[46px] px-[16px] rounded-[8px] w-fit min-w-[110px] text-[14px] cursor-pointer mx-[8px] shadow-lg`}
         {...rest}
       >
         {text}
