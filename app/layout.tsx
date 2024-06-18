@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Inria_Serif, Lato } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 
 const lato = Lato({ weight: ["400"], subsets: ["latin"] });
-export const inria = Inria_Serif({
-  weight: ["700"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Ignacio Rodríguez Rulas",
