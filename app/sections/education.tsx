@@ -1,9 +1,7 @@
-import styles from "./styles.module.css";
-
 export default function Education() {
   return (
     <>
-      <section className={`${styles.container}`}>
+      <section className="">
         <h1>Education</h1>
       </section>
     </>

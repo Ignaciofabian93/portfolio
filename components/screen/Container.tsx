@@ -1,9 +1,9 @@
-import styles from "./styles.module.css";
-
 export default function Container({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <main className="container">{children}</main>
+      <main className="w-screen h-screen flex flex-col items-center justify-center bg-black-100">
+        {children}
+      </main>
     </>
   );
 }

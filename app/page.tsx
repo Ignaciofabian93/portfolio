@@ -1,13 +1,12 @@
 import Home from "./sections/home";
-import MainButton from "@/components/buttons/MainButton";
 import Container from "@/components/screen/Container";
 import Skills from "./sections/skills";
+import Carousel from "@/components/carousel/Carousel";
 
 export default function Main() {
   return (
     <Container>
-      {/* <Home /> */}
-      <Skills />
+      <Carousel />
     </Container>
   );
 }

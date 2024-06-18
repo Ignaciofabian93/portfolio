@@ -1,9 +1,7 @@
-import styles from "./styles.module.css";
-
 export default function Experience() {
   return (
     <>
-      <section className={`${styles.container}`}>
+      <section className="">
         <h1>Experience</h1>
       </section>
     </>

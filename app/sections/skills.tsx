@@ -1,9 +1,7 @@
-import styles from "./styles.module.css";
-
 export default function Skills() {
   return (
     <>
-      <section className={`${styles.container}`}>
+      <section className="">
         <h1>Skills</h1>
       </section>
     </>

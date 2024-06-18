@@ -2,18 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #051923;
-  --text: #fff;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -37,15 +30,4 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-}
-
-.container {
-  width: 100dvw;
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  background-color: var(--background);
-  color: var(--text);
 }

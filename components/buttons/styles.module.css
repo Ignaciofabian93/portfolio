@@ -1,7 +1,7 @@
 .primary {
   background-color: #006494;
   color: #fff;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .primary:hover {
@@ -12,6 +12,14 @@
 .secondary {
   background-color: #fff;
   color: #006494;
+  border-color: #006494;
+  border-width: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary:hover {
+  filter: brightness(120%);
+  transition: all 0.3s ease-in-out;
 }
 
 .dark {

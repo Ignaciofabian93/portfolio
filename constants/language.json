@@ -3,7 +3,8 @@
     "home": {
       "title": "Ignacio Rodríguez Rulas",
       "subtitle": "Software Developer",
-      "home_button": "Download CV"
+      "cv_button": "Download CV",
+      "contact_button": "Contact me"
     },
     "skills": {
       "title": "Skills",
