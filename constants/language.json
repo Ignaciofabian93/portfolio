@@ -1,0 +1,32 @@
+{
+  "english": {
+    "home": {
+      "title": "Ignacio Rodríguez Rulas",
+      "subtitle": "Software Developer",
+      "home_button": "Download CV"
+    },
+    "skills": {
+      "title": "Skills",
+      "front": [
+        "html",
+        "css",
+        "JavaScript",
+        "TypeScript",
+        "ReactJs",
+        "React Native",
+        "NextJs"
+      ],
+      "back": ["NodeJs", "Express", ""],
+      "tools": []
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "experience": {
+      "title": "Experience"
+    },
+    "education": {
+      "title": "Education"
+    }
+  }
+}

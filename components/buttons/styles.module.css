@@ -1,0 +1,20 @@
+.primary {
+  background-color: #006494;
+  color: #fff;
+  transition: all 0.3 ease-in-out;
+}
+
+.primary:hover {
+  filter: brightness(90%);
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary {
+  background-color: #fff;
+  color: #006494;
+}
+
+.dark {
+  background-color: #051923;
+  color: #fff;
+}
