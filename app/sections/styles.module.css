@@ -16,8 +16,8 @@
 }
 
 .home_icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
 }
 
@@ -26,12 +26,7 @@
   height: 180px;
   border-radius: 50%;
   overflow: hidden;
-  filter: sepia(80%);
-}
-
-.home_image {
-  width: 100%;
-  height: 100%;
+  opacity: 0.8;
 }
 
 .home_buttons {

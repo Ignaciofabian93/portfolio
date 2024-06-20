@@ -7,8 +7,13 @@ import styles from "./styles.module.css";
 import { CustomSubtitle, CustomTitle } from "@/components/text/CustomText";
 import { MainButton } from "@/components/buttons/Buttons";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function Home() {
+type HomeProps = {
+  redirect: (page: number) => void;
+};
+
+export default function Home({ redirect }: HomeProps) {
   return (
     <>
       <div className={styles.home_container}>
@@ -28,16 +33,13 @@ export default function Home() {
                 className={styles.home_icon}
               />
             </Link>
-            <Link
-              target="_blank"
-              href={"https://www.youtube.com/channel/UC9Dfk3dI8bC7dtWLu1zxHbQ"}
-            >
+            <Link href={"https://www.youtube.com/@console.coding/videos"}>
               <Image src={youtube} alt="youtube" className={styles.home_icon} />
             </Link>
           </div>
         </div>
         <div className={styles.home_image_container}>
-          <Image src={me} alt="me" className={``} />
+          <Image src={me} alt="me" />
         </div>
         <div className={styles.home_buttons}>
           <MainButton
@@ -47,7 +49,7 @@ export default function Home() {
           />
           <MainButton
             text={language.english.home.contact_button}
-            onClick={() => {}}
+            onClick={() => redirect(5)}
             type="secondary"
           />
         </div>

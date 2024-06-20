@@ -1,12 +1,25 @@
 .primary {
-  background-color: #899878;
-  border-color: #899878;
-  color: #f7f7f2;
+  background-color: var(--secondary-500);
+  border-color: var(--primary-500);
+  color: var(--light-500);
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary:hover {
+  background-color: var(--secondary-600);
+  transition: all 0.3s ease-in-out;
 }
 
 .secondary {
-  background-color: #222725/60;
-  color: #899878;
-  border-color: #899878;
+  background-color: var(--primary-500);
+  border-color: var(--secondary-500);
+  color: var(--secondary-500);
+  transition: all 0.3s ease-in-out;
+}
+
+.secondary:hover {
+  border-color: var(--secondary-600);
+  color: var(--secondary-600);
+  transition: all 0.3s ease-in-out;
 }

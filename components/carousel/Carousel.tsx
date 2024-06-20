@@ -19,8 +19,8 @@ const Dot = ({ selected, onClick }: DotProps) => {
       <div
         onClick={onClick}
         className={`w-[10px] h-[10px] ${
-          selected ? "bg-primary-500" : "bg-white-500"
-        } rounded-full mx-[1rem] border-[1px] border-primary-500 cursor-pointer`}
+          selected ? "bg-secondary-500" : "bg-white-500"
+        } rounded-full mx-[1rem] border-[1px] border-secondary-500 cursor-pointer`}
       />
     </>
   );
@@ -55,8 +55,10 @@ export default function Carousel() {
     setTouchEnd(null);
   };
 
+  const handleRedirect = (page: number) => setSelected(page);
+
   const pages = [
-    <Home />,
+    <Home redirect={handleRedirect} />,
     <Skills />,
     <Education />,
     <Experience />,
