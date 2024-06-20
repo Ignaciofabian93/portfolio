@@ -1,28 +1,12 @@
 .primary {
-  background-color: #006494;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-
-.primary:hover {
-  filter: brightness(90%);
-  transition: all 0.3s ease-in-out;
+  background-color: #899878;
+  border-color: #899878;
+  color: #f7f7f2;
+  font-size: 14px;
 }
 
 .secondary {
-  background-color: #fff;
-  color: #006494;
-  border-color: #006494;
-  border-width: 1px;
-  transition: all 0.3s ease-in-out;
-}
-
-.secondary:hover {
-  filter: brightness(120%);
-  transition: all 0.3s ease-in-out;
-}
-
-.dark {
-  background-color: #051923;
-  color: #fff;
+  background-color: #222725/60;
+  color: #899878;
+  border-color: #899878;
 }

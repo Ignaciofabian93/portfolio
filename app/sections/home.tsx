@@ -1,36 +1,57 @@
 import language from "@/constants/language.json";
 import Image from "next/image";
 import me from "@/assets/images/me.jpg";
-import MainButton from "@/components/buttons/MainButton";
+import linkedin from "@/assets/icons/linkedin.png";
+import youtube from "@/assets/icons/youtube.png";
 import styles from "./styles.module.css";
+import { CustomSubtitle, CustomTitle } from "@/components/text/CustomText";
+import { MainButton } from "@/components/buttons/Buttons";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <section className={styles.home_container}>
+      <div className={styles.home_container}>
         <div className={styles.home_header}>
-          <div className={styles.home_text}>
-            <h1
-              className={`text-4xl text-center mb-[0.5rem] font-serif italic`}
+          <CustomTitle text={language.english.home.title} />
+          <CustomSubtitle text={language.english.home.subtitle} />
+          <div className="w-[25%] h-fit flex items-center justify-between mt-[1rem]">
+            <Link
+              target="_blank"
+              href={
+                "https://www.linkedin.com/in/ignacio-rodr%C3%ADguez-rulas-9553b21a2/"
+              }
             >
-              {language.english.home.title}
-            </h1>
-            <h4 className={`text-lg text-center mb-[1rem] font-serif italic`}>
-              {language.english.home.subtitle}
-            </h4>
-          </div>
-          <div className={styles.home_image}>
-            <Image src={me} alt="me" />
+              <Image
+                src={linkedin}
+                alt="linkedin"
+                className={styles.home_icon}
+              />
+            </Link>
+            <Link
+              target="_blank"
+              href={"https://www.youtube.com/channel/UC9Dfk3dI8bC7dtWLu1zxHbQ"}
+            >
+              <Image src={youtube} alt="youtube" className={styles.home_icon} />
+            </Link>
           </div>
         </div>
+        <div className={styles.home_image_container}>
+          <Image src={me} alt="me" className={``} />
+        </div>
         <div className={styles.home_buttons}>
-          <MainButton text={language.english.home.cv_button} type="primary" />
+          <MainButton
+            text={language.english.home.cv_button}
+            onClick={() => {}}
+            type="primary"
+          />
           <MainButton
             text={language.english.home.contact_button}
+            onClick={() => {}}
             type="secondary"
           />
         </div>
-      </section>
+      </div>
     </>
   );
 }

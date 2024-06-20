@@ -5,6 +5,8 @@ import Skills from "@/app/sections/skills";
 import Education from "@/app/sections/education";
 import Experience from "@/app/sections/experience";
 import Projects from "@/app/sections/projects";
+import Contact from "@/app/sections/contact";
+import Container from "@/app/ui/Container";
 
 type DotProps = {
   selected: boolean;
@@ -59,6 +61,7 @@ export default function Carousel() {
     <Education />,
     <Experience />,
     <Projects />,
+    <Contact />,
   ];
 
   const goLeft = () => {
@@ -78,7 +81,7 @@ export default function Carousel() {
 
   return (
     <>
-      <section className="w-[90%] h-[90%] shadow-2xl shadow-white-100 border-[2px] bg-white-500 border-white-100 rounded-[8px] px-[1rem] py-[0.5rem]">
+      <Container>
         <div className="w-full h-[92%] flex items-center justify-center">
           <div
             onTouchStart={onTouchStart}
@@ -98,7 +101,7 @@ export default function Carousel() {
             />
           ))}
         </div>
-      </section>
+      </Container>
     </>
   );
 }

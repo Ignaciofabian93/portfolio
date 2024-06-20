@@ -5,8 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-}
-* {
   box-sizing: border-box;
 }
 
@@ -14,7 +12,6 @@ body {
   min-height: 100dvh;
 }
 input,
-button,
 textarea,
 select {
   font: inherit;
@@ -30,6 +27,14 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+#main_button {
+  min-width: 110px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  border-width: 0.5px;
 }
 
 .slide-left {
