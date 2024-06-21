@@ -7,7 +7,6 @@ import styles from "./styles.module.css";
 import { CustomSubtitle, CustomTitle } from "@/components/text/CustomText";
 import { MainButton } from "@/components/buttons/Buttons";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 type HomeProps = {
   redirect: (page: number) => void;
@@ -39,7 +38,7 @@ export default function Home({ redirect }: HomeProps) {
           </div>
         </div>
         <div className={styles.home_image_container}>
-          <Image src={me} alt="me" />
+          <Image src={me} alt="me" priority={true} />
         </div>
         <div className={styles.home_buttons}>
           <MainButton
