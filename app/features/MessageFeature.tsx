@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Mail, Send, Linkedin, Github, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 export const MessageFeature: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -157,10 +158,10 @@ export const MessageFeature: React.FC = () => {
                   Email
                 </h4>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="mailto:ignaciofabian93@gmail.com"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  your.email@example.com
+                  ignaciofabian93@gmail.com
                 </a>
               </div>
               <div>
@@ -177,9 +178,7 @@ export const MessageFeature: React.FC = () => {
                   Availability
                 </h4>
                 <p className="text-gray-300">Open for new opportunities</p>
-                <p className="text-sm text-gray-400">
-                  Full-time • Contract • Consulting
-                </p>
+                <p className="text-sm text-gray-400">Full-time • Contract</p>
               </div>
             </div>
           </div>
@@ -189,8 +188,8 @@ export const MessageFeature: React.FC = () => {
               Connect With Me
             </h3>
             <div className="space-y-3">
-              <a
-                href="https://linkedin.com/in/yourprofile"
+              <Link
+                href="https://www.linkedin.com/in/ignacio-rodríguez-rulas/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group"
@@ -204,9 +203,9 @@ export const MessageFeature: React.FC = () => {
                     Let&apos;s connect professionally
                   </div>
                 </div>
-              </a>
-              <a
-                href="https://github.com/yourusername"
+              </Link>
+              <Link
+                href="https://github.com/Ignaciofabian93"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group"
@@ -218,9 +217,9 @@ export const MessageFeature: React.FC = () => {
                   <div className="font-semibold">GitHub</div>
                   <div className="text-xs text-gray-400">Check out my code</div>
                 </div>
-              </a>
-              <a
-                href="mailto:your.email@example.com"
+              </Link>
+              <Link
+                href="mailto:ignaciofabian93@gmail.com"
                 className="flex items-center gap-3 text-gray-300 hover:text-cyan-400 transition-colors group"
               >
                 <div className="w-10 h-10 bg-slate-700/50 rounded-lg flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors">
@@ -232,11 +231,11 @@ export const MessageFeature: React.FC = () => {
                     Direct communication
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-lg p-6">
+          <div className="bg-linear-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-lg p-6">
             <h4 className="text-lg font-semibold text-cyan-400 mb-2">
               Quick Response
             </h4>

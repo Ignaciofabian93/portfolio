@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Terminal, Database, Code, Cloud } from "lucide-react";
+import { Terminal, Database } from "lucide-react";
 
 // Import components
 import { TerminalHeader } from "./TerminalHeader";
 import { ProfileSection } from "./ProfileSection";
 import { LocationStatus } from "./LocationStatus";
 import { StackCard } from "./StackCard";
-import { ArchitectureCard } from "./ArchitectureCard";
 import { TabNavigation } from "./TabNavigation";
 import { CTASection } from "./CTASection";
 import { GridBackground } from "./GridBackground";
@@ -68,21 +67,21 @@ const Portfolio = () => {
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <StackCard
-              title="MERN"
-              technologies={["Mongo", "Express", "React", "Node"]}
-              icon={Database}
-              color="cyan"
-            />
-            <StackCard
               title="PERN"
               technologies={["Postgres", "Express", "React", "Node"]}
               icon={Database}
               color="purple"
             />
+            <StackCard
+              title="MERN"
+              technologies={["Mongo", "Express", "React", "Node"]}
+              icon={Database}
+              color="cyan"
+            />
           </div>
 
           {/* Architecture Cards */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <ArchitectureCard
               title="System Architecture"
               description="Microservices & Distributed Systems"
@@ -95,7 +94,7 @@ const Portfolio = () => {
               icon={Cloud}
               color="orange"
             />
-          </div>
+          </div> */}
         </section>
 
         {/* Tab Navigation - Fixed position */}

@@ -15,7 +15,7 @@ export const ExperienceFeature: React.FC = () => {
     {
       company: "Walmart Global Tech",
       position: "Software Engineer III",
-      period: "Jul 2022 - Present",
+      period: "Sept 2024 - Present",
       location: "Santiago, Chile",
       description: [
         "Architected and developed features for Walmart Chile marketplace using Next.js and GraphQL",
@@ -36,7 +36,7 @@ export const ExperienceFeature: React.FC = () => {
     {
       company: "Ekoru",
       position: "Co-Founder & CTO",
-      period: "Jan 2024 - Present",
+      period: "Apr 2025 - Present",
       location: "Santiago, Chile",
       description: [
         "Founded sustainable marketplace platform connecting eco-conscious consumers and vendors",
@@ -55,9 +55,9 @@ export const ExperienceFeature: React.FC = () => {
       ],
     },
     {
-      company: "Previous Company",
+      company: "Agrosat",
       position: "Full-Stack Developer",
-      period: "Mar 2020 - Jun 2022",
+      period: "Apr 2023 - Sept 2024",
       location: "Santiago, Chile",
       description: [
         "Developed RESTful APIs and web applications using MERN stack",
@@ -66,7 +66,14 @@ export const ExperienceFeature: React.FC = () => {
         "Integrated third-party payment gateways and APIs",
         "Mentored junior developers and conducted code reviews",
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "AWS", "Redis"],
+      technologies: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "AWS",
+        "React Native",
+      ],
     },
   ];
 

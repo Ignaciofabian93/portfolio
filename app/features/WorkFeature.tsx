@@ -61,45 +61,6 @@ export const WorkFeature: React.FC = () => {
       status: "Production",
       statusColor: "green",
     },
-    {
-      name: "Real-Time Analytics Dashboard",
-      role: "Lead Developer",
-      description:
-        "Enterprise analytics platform with real-time data visualization",
-      fullDescription: [
-        "Developed real-time analytics dashboard processing 10K+ events per second",
-        "Implemented WebSocket connections for live data updates",
-        "Created customizable widgets and dashboard builder",
-        "Integrated with multiple data sources and APIs",
-        "Built export functionality for reports in multiple formats",
-      ],
-      tech: ["React", "D3.js", "Socket.io", "Node.js", "Redis", "MongoDB"],
-      status: "Production",
-      statusColor: "green",
-      github: "https://github.com/yourusername/analytics-dashboard",
-    },
-    {
-      name: "API Gateway & Microservices",
-      role: "Backend Architect",
-      description: "Scalable microservices architecture with API gateway",
-      fullDescription: [
-        "Designed and implemented microservices architecture for e-commerce platform",
-        "Built API gateway handling authentication, rate limiting, and routing",
-        "Implemented service mesh for inter-service communication",
-        "Set up monitoring and logging with Prometheus and Grafana",
-        "Established CI/CD pipelines for automated testing and deployment",
-      ],
-      tech: [
-        "Node.js",
-        "Express",
-        "Docker",
-        "Kubernetes",
-        "PostgreSQL",
-        "RabbitMQ",
-      ],
-      status: "Production",
-      statusColor: "green",
-    },
   ];
 
   const getStatusColorClasses = (color: string) => {

@@ -1,19 +1,22 @@
-import React from "react";
-import { Terminal, Code, Cloud, Database } from "lucide-react";
+import {
+  Terminal,
+  // Code, Cloud, Database
+} from "lucide-react";
 
 export const ShellFeature: React.FC = () => {
   const commands = [
     {
       cmd: "whoami",
-      output: "Senior Full-Stack Engineer @ Walmart Global Tech",
+      output: "Senior Software Engineer @ Walmart Chile - Global Tech",
     },
     {
       cmd: "cat skills.txt",
-      output: "React • Next.js • Node.js • TypeScript • GraphQL",
+      output:
+        "React • Next.js • Node.js • TypeScript • GraphQL • Microservices • AWS • Docker • CI/CD • React Native",
     },
     {
       cmd: "ls experience/",
-      output: "walmart/ ekoru/ microservices/ cloud-architecture/",
+      output: "Walmart Chile/ Ekoru/ Microservices/ Cloud-Architecture/",
     },
     {
       cmd: "echo $SPECIALIZATION",
@@ -21,32 +24,32 @@ export const ShellFeature: React.FC = () => {
     },
   ];
 
-  const stats = [
-    {
-      icon: Terminal,
-      label: "Lines of Code",
-      value: "500K+",
-      color: "text-cyan-400",
-    },
-    {
-      icon: Code,
-      label: "Projects Delivered",
-      value: "25+",
-      color: "text-purple-400",
-    },
-    {
-      icon: Cloud,
-      label: "Cloud Deployments",
-      value: "50+",
-      color: "text-orange-400",
-    },
-    {
-      icon: Database,
-      label: "Databases Optimized",
-      value: "15+",
-      color: "text-green-400",
-    },
-  ];
+  // const stats = [
+  //   {
+  //     icon: Terminal,
+  //     label: "Lines of Code",
+  //     value: "500K+",
+  //     color: "text-cyan-400",
+  //   },
+  //   {
+  //     icon: Code,
+  //     label: "Projects Delivered",
+  //     value: "25+",
+  //     color: "text-purple-400",
+  //   },
+  //   {
+  //     icon: Cloud,
+  //     label: "Cloud Deployments",
+  //     value: "50+",
+  //     color: "text-orange-400",
+  //   },
+  //   {
+  //     icon: Database,
+  //     label: "Databases Optimized",
+  //     value: "15+",
+  //     color: "text-green-400",
+  //   },
+  // ];
 
   return (
     <div className="space-y-6 animate-fadeIn">
@@ -77,7 +80,7 @@ export const ShellFeature: React.FC = () => {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
           return (
@@ -93,10 +96,10 @@ export const ShellFeature: React.FC = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
 
       {/* Quick Facts */}
-      <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/20 rounded-lg p-6">
+      <div className="bg-linear-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/20 rounded-lg p-6">
         <h3 className="text-lg font-semibold mb-4 text-cyan-400">
           Quick Facts
         </h3>
@@ -104,23 +107,28 @@ export const ShellFeature: React.FC = () => {
           <li className="flex items-center gap-2">
             <span className="text-cyan-400">▸</span>
             <span>
-              Built and deployed microservices handling 1M+ requests/day
-            </span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-cyan-400">▸</span>
-            <span>Reduced API response time by 40% through optimization</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-cyan-400">▸</span>
-            <span>
-              Led team of 5 engineers in agile development environment
+              Deployed and tested microservices across 4 markets (CL, MX, CA,
+              US)
             </span>
           </li>
           <li className="flex items-center gap-2">
             <span className="text-cyan-400">▸</span>
             <span>
-              Migrated legacy systems to modern cloud-native architecture
+              Optimized existing Walmart microservices for market-specific
+              requirements
+            </span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-cyan-400">▸</span>
+            <span>
+              Building scalable marketplace platform with GraphQL Federation
+            </span>
+          </li>
+          <li className="flex items-center gap-2">
+            <span className="text-cyan-400">▸</span>
+            <span>
+              Led multi-tenant testing and deployment strategies for enterprise
+              systems
             </span>
           </li>
         </ul>

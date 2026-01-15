@@ -1,8 +1,6 @@
-import React from "react";
-
 export const GridBackground: React.FC = () => {
   return (
-    <div className="fixed inset-0 pointer-events-none opacity-10 -z-10">
+    <div className="fixed inset-0 pointer-events-none opacity-5 z-0">
       <div
         className="absolute inset-0"
         style={{

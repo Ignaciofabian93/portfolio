@@ -10,7 +10,7 @@ interface CTASectionProps {
 export const CTASection: React.FC<CTASectionProps> = ({
   title = "Architecting scalable solutions at Walmart.",
   subtitle = "Ready to bring enterprise expertise to Canada.",
-  email = "your.email@example.com",
+  email = "ignaciofabian93@gmail.com",
   buttonText = "Contact Me",
 }) => {
   return (
