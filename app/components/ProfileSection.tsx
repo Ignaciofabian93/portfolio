@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const ProfileSection: React.FC = () => {
-  const seniority = "Senior ";
+  const seniority = "Full-Stack ";
   const software = "Software ";
   const role = "Engineer";
   const company = "Walmart Global Tech";
