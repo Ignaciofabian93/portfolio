@@ -15,7 +15,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   return (
     <div className="bg-linear-to-br from-cyan-900/30 to-blue-900/30 border border-cyan-500/30 rounded-2xl p-8 text-center">
-      <p className="text-gray-300 mb-2">{title}</p>
+      <h2 className="text-gray-300 mb-2">{title}</h2>
       <p className="text-gray-400 mb-6">{subtitle}</p>
       <a
         href={`mailto:${email}`}

@@ -1,21 +1,25 @@
-import React from "react";
+export const LocationStatus: React.FC = () => {
+  const location = "📍 Santiago, CL";
+  const status = "OPEN TO CANADA";
+  const skillsList = [
+    "React.js",
+    "Next.js",
+    "GraphQL",
+    "Microservices",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Docker",
+    "Git",
+    "React Native",
+  ];
 
-interface LocationStatusProps {
-  location?: string;
-  status?: string;
-  skills?: string[];
-}
+  const specializingIn = "Specializing in:";
 
-export const LocationStatus: React.FC<LocationStatusProps> = ({
-  location = "Santiago, CL",
-  status = "OPEN TO CANADA",
-  skills = ["Next.js", "GraphQL", "Microservices"],
-}) => {
   return (
     <div className="space-y-4 md:text-right">
       <div className="inline-block">
         <div className="flex items-center gap-2 text-gray-400 mb-2">
-          <span>📍</span>
           <span>{location}</span>
         </div>
         <div className="flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg px-4 py-2">
@@ -25,9 +29,9 @@ export const LocationStatus: React.FC<LocationStatusProps> = ({
       </div>
 
       <div className="mt-8 text-left md:text-right">
-        <p className="text-gray-400 text-sm mb-2">Specializing in:</p>
+        <p className="text-gray-400 text-sm mb-2">{specializingIn}</p>
         <div className="flex flex-wrap gap-2 justify-start md:justify-end">
-          {skills.map((skill, index) => (
+          {skillsList.map((skill, index) => (
             <span
               key={index}
               className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-xs text-cyan-400"

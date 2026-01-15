@@ -1,27 +1,19 @@
 import Image from "next/image";
-import React from "react";
 
-interface ProfileSectionProps {
-  name?: string;
-  title?: string;
-  company?: string;
-  experience?: string;
-  additionalInfo?: string;
-  imageUrl?: string;
-}
+export const ProfileSection: React.FC = () => {
+  const seniority = "Senior ";
+  const software = "Software ";
+  const role = "Engineer";
+  const company = "Walmart Global Tech";
+  const experience = "5+ Years Experience";
+  const additionalInfo = "Co-Founder & CTO @ Ekoru";
+  const name = "Ignacio Fabián Rodríguez Rulas";
+  const imageUrl = "/ignacio.png";
 
-export const ProfileSection: React.FC<ProfileSectionProps> = ({
-  name = "Ignacio",
-  title = "Full-Stack",
-  company = "Walmart Global Tech",
-  experience = "5+ Years Experience",
-  additionalInfo = "Co-Founder & CTO @ Ekoru",
-  imageUrl = "/ignacio.png",
-}) => {
   return (
-    <div className="space-y-6">
-      <div className="relative w-32 h-32 animate-float">
-        <div className="absolute inset-0 bg-linear-to-br from-cyan-400 to-blue-600 rounded-full blur-xl opacity-50"></div>
+    <article className="space-y-6">
+      <div className="relative w-32 h-32">
+        <div className="absolute inset-0 bg-linear-to-br from-cyan-400 to-blue-600 rounded-full blur-lg opacity-50"></div>
         <Image
           src={imageUrl}
           width={800}
@@ -35,10 +27,10 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({
 
       <div>
         <h1 className="text-5xl font-bold mb-2 leading-tight">
-          Senior <br />
-          <span className="text-gray-300">{title}</span>
+          {seniority} <br />
+          <span className="text-gray-300">{software}</span>
           <br />
-          <span className="text-cyan-400">Engineer.</span>
+          <span className="text-cyan-400">{role}.</span>
         </h1>
       </div>
 
@@ -56,6 +48,6 @@ export const ProfileSection: React.FC<ProfileSectionProps> = ({
           <span>{additionalInfo}</span>
         </div>
       </div>
-    </div>
+    </article>
   );
 };

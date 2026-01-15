@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Terminal, Database, Code, Cloud } from "lucide-react";
 
 // Import components
@@ -20,12 +20,7 @@ import { WorkFeature } from "../features/WorkFeature";
 import { MessageFeature } from "../features/MessageFeature";
 
 const Portfolio = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("shell");
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -43,29 +38,33 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100">
+    <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100">
       <TerminalHeader />
 
       {/* Main Content */}
-      <div
-        className={`max-w-6xl mx-auto px-6 pt-24 pb-12 transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+      <main
+        className={`max-w-6xl mx-auto px-6 pt-24 pb-12 transition-all duration-1000`}
       >
         {/* Hero Section */}
-        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+        <section
+          className="grid md:grid-cols-2 gap-12 items-start mb-16"
+          aria-label="Profile and location"
+        >
           <ProfileSection />
           <LocationStatus />
-        </div>
+        </section>
 
         {/* Stack Visualization */}
-        <div className="mb-12">
-          <div className="flex items-center gap-2 mb-6 text-gray-500">
+        <section className="mb-12" aria-labelledby="stack-heading">
+          <h2
+            id="stack-heading"
+            className="flex items-center gap-2 mb-6 text-gray-500"
+          >
             <Terminal size={16} />
             <span className="text-sm uppercase tracking-wider">
               STACK_VISUALIZATION
             </span>
-          </div>
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <StackCard
@@ -97,21 +96,23 @@ const Portfolio = () => {
               color="orange"
             />
           </div>
-        </div>
+        </section>
 
         {/* Tab Navigation - Fixed position */}
-        <div className="mb-8">
+        <nav className="mb-8" aria-label="Portfolio sections">
           <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
-        </div>
+        </nav>
 
         {/* Tab Content - Renders below navigation */}
-        <div className="mb-12 min-h-[400px]">
+        <section className="mb-12 min-h-100" aria-label="Portfolio content">
           {renderTabContent()}
-        </div>
+        </section>
 
         {/* CTA Section */}
-        <CTASection />
-      </div>
+        <section aria-label="Contact">
+          <CTASection />
+        </section>
+      </main>
 
       <GridBackground />
     </div>

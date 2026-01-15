@@ -113,16 +113,16 @@ export const WorkFeature: React.FC = () => {
 
   return (
     <div className="space-y-6 animate-fadeIn">
-      <div className="flex items-center gap-2 mb-4 text-gray-500">
+      <h2 className="flex items-center gap-2 mb-4 text-gray-500">
         <Briefcase size={16} />
         <span className="text-sm uppercase tracking-wider">
           FEATURED_PROJECTS
         </span>
-      </div>
+      </h2>
 
       <div className="grid gap-6">
         {projects.map((project, idx) => (
-          <div
+          <article
             key={idx}
             className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all"
           >
@@ -194,7 +194,7 @@ export const WorkFeature: React.FC = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

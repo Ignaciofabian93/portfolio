@@ -72,20 +72,20 @@ export const ExperienceFeature: React.FC = () => {
 
   return (
     <div className="space-y-6 animate-fadeIn">
-      <div className="flex items-center gap-2 mb-4 text-gray-500">
+      <h2 className="flex items-center gap-2 mb-4 text-gray-500">
         <Briefcase size={16} />
         <span className="text-sm uppercase tracking-wider">
           PROFESSIONAL_EXPERIENCE
         </span>
-      </div>
+      </h2>
 
       <div className="space-y-6">
         {experiences.map((exp, index) => (
-          <div
+          <article
             key={index}
             className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all"
           >
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+            <header className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
               <div>
                 <h3 className="text-xl font-bold text-cyan-400 mb-1">
                   {exp.position}
@@ -102,7 +102,7 @@ export const ExperienceFeature: React.FC = () => {
                   <span>{exp.location}</span>
                 </div>
               </div>
-            </div>
+            </header>
 
             <ul className="space-y-2 mb-4">
               {exp.description.map((item, i) => (
@@ -123,7 +123,7 @@ export const ExperienceFeature: React.FC = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

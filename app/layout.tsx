@@ -9,9 +9,38 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ignacio - Senior Full-Stack Engineer",
+  title:
+    "Ignacio - Senior Full-Stack Engineer | Next.js, GraphQL & Microservices",
   description:
-    "Senior Full-Stack Engineer specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech.",
+    "Senior Full-Stack Engineer with 5+ years of experience specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech. Co-Founder & CTO at Ekoru. Available for opportunities in Canada.",
+  keywords: [
+    "Full-Stack Engineer",
+    "Next.js",
+    "GraphQL",
+    "Microservices",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "AWS",
+    "Docker",
+    "Kubernetes",
+  ],
+  authors: [{ name: "Ignacio Rodríguez" }],
+  openGraph: {
+    title: "Ignacio - Senior Full-Stack Engineer",
+    description:
+      "Senior Full-Stack Engineer specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ignacio - Senior Full-Stack Engineer",
+    description:
+      "Senior Full-Stack Engineer specializing in Next.js, GraphQL, and Microservices.",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
 };
 
 export default function RootLayout({
@@ -19,8 +48,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ignacio Rodríguez",
+    jobTitle: "Senior Full-Stack Engineer",
+    description:
+      "Senior Full-Stack Engineer with 5+ years of experience specializing in Next.js, GraphQL, and Microservices",
+    worksFor: {
+      "@type": "Organization",
+      name: "Walmart Global Tech",
+    },
+    alumniOf: {
+      "@type": "Organization",
+      name: "Ekoru",
+    },
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "GraphQL",
+      "TypeScript",
+      "Node.js",
+      "Microservices",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "NestJS",
+      "PostgreSQL",
+    ],
+    sameAs: [
+      "https://github.com/Ignaciofabian93",
+      "https://www.linkedin.com/in/ignacio-rodríguez-rulas/",
+    ],
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className={`${jetbrainsMono.variable} antialiased`}>
         {children}
       </body>
