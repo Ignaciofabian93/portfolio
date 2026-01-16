@@ -7,7 +7,7 @@ export const ShellFeature: React.FC = () => {
   const commands = [
     {
       cmd: "whoami",
-      output: "Senior Software Engineer @ Walmart Chile - Global Tech",
+      output: "Software Engineer III @ Walmart Chile - Global Tech",
     },
     {
       cmd: "cat skills.txt",

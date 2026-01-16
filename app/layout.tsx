@@ -10,9 +10,9 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title:
-    "Ignacio - Senior Full-Stack Engineer | Next.js, GraphQL & Microservices",
+    "Ignacio - Full-Stack Software Engineer | Next.js, GraphQL & Microservices",
   description:
-    "Senior Full-Stack Engineer with 5+ years of experience specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech. Co-Founder & CTO at Ekoru. Available for opportunities in Canada.",
+    "Full-Stack Software Engineer with 5+ years of experience specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech. Co-Founder & CTO at Ekoru. Available for opportunities in Canada.",
   keywords: [
     "Full-Stack Engineer",
     "Next.js",
@@ -27,17 +27,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ignacio Rodríguez" }],
   openGraph: {
-    title: "Ignacio - Senior Full-Stack Engineer",
+    title: "Ignacio - Full-Stack Software Engineer",
     description:
-      "Senior Full-Stack Engineer specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech.",
+      "Full-Stack Software Engineer specializing in Next.js, GraphQL, and Microservices. Building scalable solutions at Walmart Global Tech.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ignacio - Senior Full-Stack Engineer",
+    title: "Ignacio - Full-Stack Software Engineer",
     description:
-      "Senior Full-Stack Engineer specializing in Next.js, GraphQL, and Microservices.",
+      "Full-Stack Software Engineer specializing in Next.js, GraphQL, and Microservices.",
   },
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
@@ -52,9 +52,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Ignacio Rodríguez",
-    jobTitle: "Senior Full-Stack Engineer",
+    jobTitle: "Full-Stack Software Engineer",
     description:
-      "Senior Full-Stack Engineer with 5+ years of experience specializing in Next.js, GraphQL, and Microservices",
+      "Full-Stack Software Engineer with 5+ years of experience specializing in Next.js, GraphQL, and Microservices",
     worksFor: {
       "@type": "Organization",
       name: "Walmart Global Tech",

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, Briefcase } from "lucide-react";
 import { TerminalHeader } from "../components/TerminalHeader";
-import Image from "next/image";
 
 export default function WorkPage() {
   const experiences = [
@@ -12,18 +11,16 @@ export default function WorkPage() {
       period: "Sept 2024 - Present",
       description:
         "Developing and maintaining Chile market features in shared codebase. Ensuring multi-tenant compatibility across CL, MX, CA, US through comprehensive functional and e2e testing",
-      logo: "/walmart-logo.webp",
-      color: "border-blue-500/50",
+      borderColor: "rgb(59 130 246 / 0.5)", // blue-500/50
     },
     {
       slug: "ekoru",
-      company: "Ekoru",
+      company: "EKORU",
       position: "Co-Founder & Lead Engineer",
       period: "Apr 2025 - Present",
       description:
         "Architecting sustainable marketplace with microservices and GraphQL Federation",
-      logo: "/ekoru-logo.webp",
-      color: "border-green-500/50",
+      borderColor: "rgb(34 197 94 / 0.5)", // green-500/50
     },
     {
       slug: "agrosat",
@@ -31,19 +28,17 @@ export default function WorkPage() {
       position: "Full Stack Developer",
       period: "Apr 2023 - Sept 2024",
       description:
-        "Built agricultural analytics dashboards processing 100GB+ satellite data",
-      logo: "/agrosat-logo.webp",
-      color: "border-red-500/50",
+        "Built agricultural analytics dashboards and mobile apps processing 100GB+ satellite data",
+      borderColor: "rgb(239 68 68 / 0.5)", // red-500/50
     },
     {
       slug: "freelance",
       company: "Freelance",
       position: "Full Stack Developer",
-      period: "2020 - 2023",
+      period: "Aug 2020 - Apr 2023",
       description:
         "Delivered custom web applications for various clients. Built responsive SPAs, REST APIs, and integrated third-party services",
-      logo: "/freelance-img.webp",
-      color: "border-cyan-500/50",
+      borderColor: "rgb(6 182 212 / 0.5)", // cyan-500/50
     },
   ];
 
@@ -74,25 +69,15 @@ export default function WorkPage() {
         </section>
 
         {/* Experience List */}
-        <section className="space-y-6">
+        <section className="space-y-6 mb-8">
           {experiences.map((exp) => (
             <Link
               key={exp.slug}
               href={`/work/${exp.slug}`}
-              className={`block bg-slate-800/30 border ${exp.color} rounded-lg p-6 hover:bg-slate-800/50 transition-all group`}
+              className="block bg-slate-800/30 border rounded-lg p-6 hover:bg-slate-800/50 transition-all group"
+              style={{ borderColor: exp.borderColor }}
             >
               <div className="flex items-start gap-6">
-                {/* Logo */}
-                <div className="shrink-0 w-20 h-20 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                  <Image
-                    width={200}
-                    height={100}
-                    src={exp.logo}
-                    alt={`${exp.company} logo`}
-                    className="w-10/12 h-10/12 object-contain p-2"
-                  />
-                </div>
-
                 {/* Content */}
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-cyan-400 mb-1 group-hover:text-cyan-300 transition-colors">
@@ -112,22 +97,6 @@ export default function WorkPage() {
               </div>
             </Link>
           ))}
-        </section>
-
-        {/* Stats Section */}
-        <section className="mt-12 grid md:grid-cols-3 gap-6">
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">5+</div>
-            <div className="text-gray-400">Years Experience</div>
-          </div>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">4</div>
-            <div className="text-gray-400">Companies</div>
-          </div>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">20+</div>
-            <div className="text-gray-400">Projects Delivered</div>
-          </div>
         </section>
       </main>
     </div>
