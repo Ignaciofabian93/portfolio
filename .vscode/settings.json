@@ -8,5 +8,15 @@
   "tailwindCSS.lint.recommendedVariantOrder": "ignore",
   "tailwindCSS.experimental.classRegex": [],
   "css.lint.unknownAtRules": "ignore",
-  "cSpell.words": ["Agrosat", "Ekoru", "Fabián", "ignacio", "MERN", "PERN"]
+  "cSpell.words": [
+    "agrosat",
+    "Agrosat",
+    "ekoru",
+    "Ekoru",
+    "Fabián",
+    "ignacio",
+    "MERN",
+    "PERN",
+    "walmart"
+  ]
 }

@@ -6,7 +6,7 @@ export const ProfileSection: React.FC = () => {
   const role = "Engineer";
   const company = "Walmart Global Tech";
   const experience = "5+ Years Experience";
-  const additionalInfo = "Co-Founder & CTO @ Ekoru";
+  const additionalInfo = "Co-Founder & Lead Engineer @ Ekoru";
   const name = "Ignacio Fabián Rodríguez Rulas";
   const imageUrl = "/ignacio.png";
 

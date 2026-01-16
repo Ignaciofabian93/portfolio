@@ -1,4 +1,3 @@
-import React from "react";
 import { Terminal, Code, Briefcase, Mail, LucideIcon } from "lucide-react";
 
 interface Tab {

@@ -4,7 +4,7 @@ Full-stack Software Engineer portfolio showcasing 5+ years of experience buildin
 
 ## 🌐 Live Site
 
-**[Visit Portfolio →](https://tu-portfolio.vercel.app)**
+**[Visit Portfolio →](https://www.ignaciorodriguez.dev)**
 
 ## 👨‍💻 About
 
