@@ -8,7 +8,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { TerminalHeader } from "../../components/TerminalHeader";
-import Image from "next/image";
 
 export default function EkoruPage() {
   const technologies = [
@@ -111,17 +110,8 @@ export default function EkoruPage() {
 
         {/* Header */}
         <div className="mb-12">
-          <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-            <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-              <Image
-                width={300}
-                height={100}
-                src="/EKORU-logo.webp"
-                alt="EKORU logo"
-                className="w-8/12 h-8/12 object-contain p-6"
-              />
-            </div>
-            <div className="text-center md:text-left">
+          <div className="flex flex-row items-center gap-6 mb-8">
+            <div className="text-left">
               <h1 className="text-4xl font-bold text-green-400 mb-2">
                 Co-Founder & Lead Engineer
               </h1>
