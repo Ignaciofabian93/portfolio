@@ -79,22 +79,6 @@ const Portfolio = () => {
               color="cyan"
             />
           </div>
-
-          {/* Architecture Cards */}
-          {/* <div className="space-y-4">
-            <ArchitectureCard
-              title="System Architecture"
-              description="Microservices & Distributed Systems"
-              icon={Code}
-              color="blue"
-            />
-            <ArchitectureCard
-              title="Cloud Native"
-              description="AWS • Docker • Kubernetes"
-              icon={Cloud}
-              color="orange"
-            />
-          </div> */}
         </section>
 
         {/* About Me Section */}

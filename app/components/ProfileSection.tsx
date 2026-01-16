@@ -21,6 +21,7 @@ export const ProfileSection: React.FC = () => {
           alt={`${name} Profile`}
           className="relative w-full h-full rounded-full border-4 border-cyan-500/50 object-cover grayscale"
           style={{ filter: "grayscale(100%)" }}
+          priority
         />
         <div className="absolute bottom-0 right-0 w-4 h-4 bg-cyan-400 rounded-full border-2 border-slate-900 animate-pulse"></div>
       </div>
