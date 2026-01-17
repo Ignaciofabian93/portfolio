@@ -20,6 +20,8 @@ export default function EkoruPage() {
     "Docker",
     "React",
     "Microservices",
+    "Zustand",
+    "JWT Authentication",
   ];
 
   const features = [
