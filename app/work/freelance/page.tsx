@@ -1,87 +1,86 @@
 import Link from "next/link";
-import { ArrowLeft, Calendar, Code, Briefcase } from "lucide-react";
+import { ArrowLeft, Calendar, Code, Globe, Zap } from "lucide-react";
 import { TerminalHeader } from "../../components/TerminalHeader";
 
 export default function FreelancePage() {
   const technologies = [
+    "HTML/CSS",
+    "JavaScript",
     "React",
     "Node.js",
     "Express",
     "MongoDB",
     "PostgreSQL",
-    "Next.js",
-    "TypeScript",
+    "Bootstrap",
     "Tailwind CSS",
-    "AWS",
+    "React Native",
+    "Responsive Design",
     "REST APIs",
-    "JWT Auth",
-    "Stripe",
+    "Git",
   ];
 
-  const projectTypes = [
+  const learningJourney = [
     {
-      title: "E-commerce Platforms",
+      phase: "Month 1-2: The Pivot",
+      title: "Sound Engineer → Web Developer",
       description:
-        "Built custom online stores with payment integration, inventory management, and admin dashboards",
-      count: "5+ projects",
+        "Events industry collapsed overnight due to COVID-19. Made the decision to transition from sound engineering to web development out of necessity. Intensive self-learning: HTML, CSS, JavaScript fundamentals through online resources and practice.",
+    },
+    {
+      phase: "Month 3: First Production Project",
+      title: "Coffee Shop Single Page Application",
+      description:
+        "Built first client project - a complete SPA for a local coffee shop using React. Though the business couldn't continue due to economic challenges, proved ability to deliver production-ready code after just 3 months of learning.",
+    },
+    {
+      phase: "2020-2022: Collaborative Development",
+      title: "Freelance Team Collaboration",
+      description:
+        "Joined forces with neighbor's small freelance team (developer, UX designer, server admin). Took on overflow work primarily focused on frontend development - forms, layouts, and designs for financial broker websites. Gained exposure to backend development and team collaboration.",
+    },
+    {
+      phase: "2022: Remote Work from Ireland",
+      title: "International Freelancing",
+      description:
+        "Relocated to Cork, Ireland with wife. Continued freelance work remotely to sustain living expenses in high-cost European market. Made local connections and collaborated with Irish developers while managing Chile-based projects.",
+    },
+  ];
+
+  const projectFocus = [
+    {
+      title: "Financial Broker Platforms",
+      description:
+        "Frontend development for broker websites: complex forms, data visualization, responsive layouts for desktop and mobile",
+      skills: "React, form validation, responsive design",
     },
     {
       title: "Business Websites",
       description:
-        "Developed responsive corporate websites with CMS integration for easy content management",
-      count: "10+ projects",
+        "Corporate landing pages and business websites with modern designs and mobile-first approach",
+      skills: "HTML/CSS, JavaScript, Bootstrap",
     },
     {
-      title: "SaaS Applications",
+      title: "Backend APIs",
       description:
-        "Created subscription-based web applications with authentication, billing, and user management",
-      count: "3 projects",
-    },
-    {
-      title: "REST APIs",
-      description:
-        "Built backend APIs for mobile apps and third-party integrations with comprehensive documentation",
-      count: "8+ APIs",
-    },
-    {
-      title: "Landing Pages",
-      description:
-        "Designed and developed high-converting landing pages with analytics integration",
-      count: "15+ pages",
-    },
-    {
-      title: "Dashboard Applications",
-      description:
-        "Created admin panels and analytics dashboards with data visualization",
-      count: "4 projects",
+        "RESTful APIs for data management, authentication, and third-party integrations (secondary focus)",
+      skills: "Node.js, Express, MongoDB",
     },
   ];
 
-  const services = [
-    "Full-stack web application development",
-    "REST API design and implementation",
-    "Database design and optimization",
-    "Third-party service integration (Stripe, SendGrid, etc.)",
-    "Authentication and authorization systems",
-    "Responsive UI/UX implementation",
-    "Performance optimization and SEO",
-    "Deployment and hosting setup",
-  ];
-
-  const achievements = [
-    "Delivered 40+ projects successfully across various industries",
-    "Maintained 95% client satisfaction rate with repeat business",
-    "Built scalable solutions that grew with client businesses",
-    "Integrated payment systems processing $100K+ in transactions",
-    "Reduced client operational costs through automation",
-    "Provided ongoing support and maintenance for long-term clients",
+  const keyLearnings = [
+    "Rapid skill acquisition under pressure - production-ready in 3 months",
+    "Self-directed learning and problem-solving without formal training",
+    "Adapting to remote collaboration across time zones (Chile/Ireland)",
+    "Client communication and requirement gathering",
+    "Working with existing codebases and team standards",
+    "Balancing multiple projects and deadlines independently",
   ];
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-gray-100">
       <TerminalHeader />
 
-      <main className="max-w-4xl mx-auto px-6 pt-24 pb-12">
+      <main className="max-w-4xl mx-auto px-8 pt-24 pb-12">
         {/* Back Link */}
         <Link
           href="/work"
@@ -93,88 +92,228 @@ export default function FreelancePage() {
 
         {/* Header */}
         <div className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-24 h-24 bg-slate-900 border-2 border-cyan-500/30 rounded-lg flex items-center justify-center overflow-hidden">
-              <img
-                src="/terminal.png"
-                alt="Terminal"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
+          <div className="flex flex-row items-center gap-6 mb-8">
+            <div className="text-left">
               <h1 className="text-4xl font-bold text-cyan-400 mb-2">
-                Freelance Full Stack Developer
+                Freelance Developer
               </h1>
-              <p className="text-2xl text-gray-300">Independent Contractor</p>
+              <p className="text-2xl text-gray-300">Career Transition Period</p>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-6 text-gray-400">
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-cyan-400" />
-              <span>2020 - 2023</span>
+              <span>May 2020 - Apr 2023</span>
             </div>
             <div className="flex items-center gap-2">
-              <Briefcase size={18} className="text-cyan-400" />
-              <span>40+ Projects Delivered</span>
+              <Globe size={18} className="text-cyan-400" />
+              <span>Chile & Ireland</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap size={18} className="text-cyan-400" />
+              <span>Sound Engineer → Developer</span>
             </div>
           </div>
         </div>
 
-        {/* Overview */}
+        {/* The Story */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-cyan-400">Overview</h2>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-400">The Pivot</h2>
+          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4">
             <p className="text-gray-300 leading-relaxed mb-4">
-              Worked as an independent full-stack developer delivering custom
-              web solutions for clients across various industries. Specialized
-              in building responsive web applications, REST APIs, and
-              integrating third-party services to solve business problems.
+              When COVID-19 hit in early 2020, the events industry collapsed
+              overnight. As a sound engineer whose livelihood depended on live
+              events, I faced a critical choice: reinvent myself or struggle
+              financially.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              I chose to pivot to web development - not because I had a grand
+              plan, but out of necessity. I dove into intensive self-learning:
+              HTML, CSS, JavaScript, and React. What started as survival became
+              a passion.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              Within 3 months, I delivered my first client project - a Single
+              Page Application for a local coffee shop. Though the business
+              couldn&apos;t survive the pandemic&apos;s economic impact, the
+              experience proved I could learn fast and deliver production-ready
+              code under pressure.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              Managed the entire development lifecycle from requirements
-              gathering and design to deployment and maintenance, ensuring
-              clients received scalable and maintainable solutions.
+              This period wasn&apos;t about accumulating an impressive portfolio
+              - it was about survival, rapid learning, and having the courage to
+              jump into an entirely new field without safety nets. Every project
+              taught me something new, every mistake made me better.
             </p>
           </div>
         </section>
 
-        {/* Project Types */}
+        {/* Learning Journey */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-cyan-400">
-            Project Types
+            Learning Journey
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {projectTypes.map((project, idx) => (
+
+          <div className="space-y-4">
+            {learningJourney.map((phase, idx) => (
               <div
                 key={idx}
-                className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6"
+                className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4"
               >
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-semibold text-cyan-400">
-                    {project.title}
-                  </h3>
-                  <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded">
-                    {project.count}
-                  </span>
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center border border-cyan-500/30">
+                    <span className="text-cyan-400 font-semibold text-sm">
+                      {idx + 1}
+                    </span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                      <h3 className="text-lg font-semibold text-cyan-400">
+                        {phase.title}
+                      </h3>
+                      <span className="text-xs text-gray-400 mt-1 md:mt-0">
+                        {phase.phase}
+                      </span>
+                    </div>
+                    <p className="text-gray-300 text-sm">{phase.description}</p>
+                  </div>
                 </div>
-                <p className="text-gray-300 text-sm">{project.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Services Provided */}
+        {/* Project Focus Areas */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-cyan-400">
-            Services Provided
+            Project Focus Areas
           </h2>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
-            <ul className="grid md:grid-cols-2 gap-3">
-              {services.map((service, idx) => (
+          <div className="grid md:grid-cols-1 gap-4">
+            {projectFocus.map((project, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4"
+              >
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-2">
+                  {project.description}
+                </p>
+                <p className="text-cyan-400 text-xs">
+                  <strong>Technologies:</strong> {project.skills}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Ireland Experience */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-400 flex items-center gap-2">
+            <Globe size={24} />
+            Ireland Experience (2022)
+          </h2>
+          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
+              In 2022, my wife and I relocated to Cork, Ireland. The cost of
+              living - particularly housing - was extremely high. My freelance
+              work became crucial for sustaining ourselves financially while
+              abroad.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              I continued working remotely with Chilean clients while making
+              connections in the Irish tech community. This experience taught me
+              how to manage projects across time zones, communicate
+              asynchronously, and adapt to working in a different tech
+              ecosystem.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              The networking connections I made in Ireland&apos;s tech scene
+              gave me exposure to international development practices and
+              expanded my perspective on the global tech industry - experience
+              that proved valuable when I later joined Walmart&apos;s
+              international team.
+            </p>
+          </div>
+        </section>
+
+        {/* Collaboration Experience */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-400">
+            Team Collaboration
+          </h2>
+          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4 space-y-4">
+            <div>
+              <h3 className="text-lg font-semibold text-cyan-400 mb-2">
+                Small Freelance Team
+              </h3>
+              <p className="text-gray-300 text-sm mb-3">
+                Collaborated with a neighbor&apos;s freelance team consisting of
+                a lead developer, UX designer, and server administrator. Took on
+                overflow frontend work when the team had capacity constraints.
+              </p>
+              <div className="bg-slate-900/50 border border-cyan-500/20 rounded-lg px-4 py-3">
+                <p className="text-gray-300 text-sm mb-2">
+                  <strong className="text-cyan-400">Primary Focus:</strong>{" "}
+                  Frontend development for financial broker platforms - complex
+                  forms, data tables, responsive layouts
+                </p>
+                <p className="text-gray-300 text-sm">
+                  <strong className="text-cyan-400">Secondary Exposure:</strong>{" "}
+                  Backend APIs, server deployment, team workflows, client
+                  communication
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-cyan-400 mb-2">
+                What This Taught Me
+              </h3>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400">▸</span>
+                  <span>
+                    Working with existing codebases and following team
+                    conventions
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400">▸</span>
+                  <span>
+                    Code review processes and maintaining code quality standards
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400">▸</span>
+                  <span>
+                    Collaborating with designers and translating mockups to code
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400">▸</span>
+                  <span>
+                    Managing deadlines and communicating progress with teammates
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Key Skills Developed */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-4 text-cyan-400">
+            Skills Developed
+          </h2>
+          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4">
+            <ul className="space-y-3">
+              {keyLearnings.map((learning, idx) => (
                 <li key={idx} className="flex items-start gap-3">
                   <span className="text-cyan-400 mt-1">▸</span>
-                  <span className="text-gray-300">{service}</span>
+                  <span className="text-gray-300">{learning}</span>
                 </li>
               ))}
             </ul>
@@ -185,7 +324,7 @@ export default function FreelancePage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-cyan-400 flex items-center gap-2">
             <Code size={24} />
-            Technologies Used
+            Technologies Learned
           </h2>
           <div className="flex flex-wrap gap-3">
             {technologies.map((tech, idx) => (
@@ -199,94 +338,87 @@ export default function FreelancePage() {
           </div>
         </section>
 
-        {/* Achievements */}
+        {/* Transition to Agrosat */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-cyan-400">
-            Key Achievements
+            What Came Next
           </h2>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
-            <ul className="space-y-3">
-              {achievements.map((achievement, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="text-cyan-400 mt-1">▸</span>
-                  <span className="text-gray-300">{achievement}</span>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg px-4 py-4">
+            <p className="text-gray-300 leading-relaxed mb-3">
+              In 2023, my wife and I returned to Chile. The skills I&apos;d
+              rapidly developed during my freelance period - the ability to
+              learn quickly, work independently, and deliver under pressure -
+              caught the attention of Agrosat.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              They hired me as a Full Stack Developer, marking my transition
+              from freelance work to a structured team environment. This was
+              where I began working on larger-scale agricultural technology
+              systems, eventually leading to my current role at Walmart Chile.
+            </p>
           </div>
         </section>
 
-        {/* Client Industries */}
+        {/* Reflection */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-cyan-400">
-            Industries Served
-          </h2>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-              <div className="py-3">
-                <div className="text-2xl mb-1">🛒</div>
-                <div className="text-gray-300 text-sm">E-commerce</div>
-              </div>
-              <div className="py-3">
-                <div className="text-2xl mb-1">🏢</div>
-                <div className="text-gray-300 text-sm">Corporate</div>
-              </div>
-              <div className="py-3">
-                <div className="text-2xl mb-1">🎓</div>
-                <div className="text-gray-300 text-sm">Education</div>
-              </div>
-              <div className="py-3">
-                <div className="text-2xl mb-1">🏥</div>
-                <div className="text-gray-300 text-sm">Healthcare</div>
-              </div>
-              <div className="py-3">
-                <div className="text-2xl mb-1">🎨</div>
-                <div className="text-gray-300 text-sm">Creative</div>
-              </div>
-              <div className="py-3">
-                <div className="text-2xl mb-1">💼</div>
-                <div className="text-gray-300 text-sm">Consulting</div>
-              </div>
-            </div>
+          <h2 className="text-2xl font-bold mb-4 text-cyan-400">Reflection</h2>
+          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4">
+            <p className="text-gray-300 leading-relaxed">
+              This period wasn&apos;t glamorous. There were no venture capital
+              backing, no impressive client roster, no big wins. It was messy,
+              uncertain, and driven by necessity.
+              <br />
+              <br />
+              But it taught me something invaluable:{" "}
+              <strong className="text-cyan-400">
+                the ability to learn rapidly under pressure and the courage to
+                jump into the unknown without safety nets
+              </strong>
+              . These aren&apos;t skills you can learn in a bootcamp - they come
+              from doing, from failing, from getting back up and trying again.
+              <br />
+              <br />
+              Looking back, this &quot;scrappy&quot; period of freelancing was
+              the foundation that made everything else possible. It proved I
+              could adapt, survive, and thrive when circumstances demanded it.
+            </p>
           </div>
         </section>
 
-        {/* Working Style */}
+        {/* What It Actually Took */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-cyan-400">
-            Working Style
+            What It Actually Took
           </h2>
-          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg p-6 space-y-4">
-            <div>
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">
-                Client Communication
-              </h3>
-              <p className="text-gray-300">
-                Maintained regular communication with clients through video
-                calls, project management tools, and detailed progress reports.
-                Ensured requirements were clearly understood before development.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">
-                Agile Approach
-              </h3>
-              <p className="text-gray-300">
-                Worked in iterative cycles with frequent demos and feedback
-                sessions. Delivered working software early and incorporated
-                client feedback throughout the development process.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">
-                Quality Assurance
-              </h3>
-              <p className="text-gray-300">
-                Implemented comprehensive testing strategies, performed code
-                reviews, and ensured cross-browser compatibility. Provided
-                documentation and training for client teams.
-              </p>
-            </div>
+          <div className="bg-slate-800/30 border border-cyan-500/30 rounded-lg px-4 py-4">
+            <p className="text-gray-300 leading-relaxed mb-4">
+              The period from 2020 to 2024 - spanning freelance work, Agrosat,
+              and ultimately Walmart - wasn&apos;t just about working. It was
+              about{" "}
+              <strong className="text-cyan-400">complete immersion</strong>.
+              Seven days a week. Early mornings studying before work. Late
+              nights coding after work. Weekends deep in documentation,
+              tutorials, and building projects.
+            </p>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              There were trade-offs. Health took a back seat. Social life became
+              minimal. But those four years of intensive, focused learning built
+              something concrete:
+              <strong className="text-cyan-400">
+                {" "}
+                a foundation deep enough that when Walmart&apos;s technical
+                assessment came in 2024, I passed without stress
+              </strong>
+              .
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              This isn&apos;t sustainable forever, and I have better balance
+              now. But those years proved something important: you can go from
+              zero to competitive in this field if you&apos;re willing to do
+              what most people won&apos;t. Not through shortcuts or luck -
+              through thousands of hours of deliberate practice when it matters
+              most.
+            </p>
           </div>
         </section>
       </main>
