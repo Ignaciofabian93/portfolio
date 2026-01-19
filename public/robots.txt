@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ignaciorodriguez.dev/sitemap.xml
+
+# Disallow admin or private paths (if any)
+# Disallow: /admin/
+# Disallow: /api/
+
+# Crawl-delay (optional, helps prevent overloading)
+Crawl-delay: 1
