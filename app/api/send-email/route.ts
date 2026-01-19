@@ -112,16 +112,6 @@ export async function POST(req: NextRequest) {
             line-height: 1.7;
             font-size: 15px;
           }
-          .tip-box {
-            background: rgba(34, 197, 94, 0.15);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 24px;
-          }
-          .tip-box strong {
-            color: #22c55e;
-          }
           .footer { 
             text-align: center;
             padding: 20px;
@@ -129,11 +119,6 @@ export async function POST(req: NextRequest) {
             font-size: 12px;
             border-top: 1px solid rgba(6, 182, 212, 0.2);
             background: rgba(15, 23, 42, 0.8);
-          }
-          .prompt {
-            color: #22c55e;
-            font-family: 'Courier New', monospace;
-            font-weight: 600;
           }
         </style>
       </head>
@@ -162,10 +147,6 @@ export async function POST(req: NextRequest) {
             <div class="message-box">
               <div class="message-title">&gt; Message content:</div>
               <div class="message-text">${message}</div>
-            </div>
-            
-            <div class="tip-box">
-              <span class="prompt">$</span> <strong>Quick Reply:</strong> Click "Reply" to respond directly to ${name}
             </div>
           </div>
           
