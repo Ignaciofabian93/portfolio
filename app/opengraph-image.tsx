@@ -1,4 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
+import { readFile } from "fs/promises";
+import { join } from "path";
 
 // Image metadata
 export const alt = "Ignacio Rodríguez - Full-Stack Software Engineer";
@@ -11,6 +14,12 @@ export const contentType = "image/png";
 
 // Image generation
 export default async function Image() {
+  // Read the profile image
+  const imageData = await readFile(
+    join(process.cwd(), "public", "ignacio.png")
+  );
+  const base64Image = `data:image/png;base64,${imageData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -37,14 +46,19 @@ export default async function Image() {
             height: "180px",
             borderRadius: "50%",
             border: "4px solid #06b6d4",
-            background: "#1e293b",
+            overflow: "hidden",
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "80px",
           }}
         >
-          👨‍💻
+          <img
+            src={base64Image}
+            alt="Profile"
+            width="180"
+            height="180"
+            style={{
+              objectFit: "cover",
+            }}
+          />
         </div>
 
         {/* Badge */}
@@ -90,7 +104,7 @@ export default async function Image() {
             letterSpacing: "-2px",
           }}
         >
-          Ignacio Rodríguez
+          Ignacio Fabián Rodríguez Rulas
         </h1>
 
         {/* Subtitle */}
@@ -104,6 +118,7 @@ export default async function Image() {
           }}
         >
           Full-Stack Engineer specializing in Next.js, GraphQL & Microservices
+          Architecture
         </p>
 
         {/* Tech Stack */}
