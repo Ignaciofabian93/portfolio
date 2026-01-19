@@ -17,6 +17,7 @@ import { ShellFeature } from "../features/ShellFeature";
 import { ExperienceFeature } from "../features/ExperienceFeature";
 import { WorkFeature } from "../features/WorkFeature";
 import { MessageFeature } from "../features/MessageFeature";
+import Link from "next/link";
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("shell");
@@ -95,18 +96,25 @@ const Portfolio = () => {
             <p>
               Full-stack engineer with 5+ years building scalable applications
               at enterprise and startup level. Currently at Walmart Chile
-              optimizing e-commerce for international markets, and co-founding
-              Ekoru, a sustainable marketplace launching April 2026.
+              optimizing e-commerce for international markets (CL, MX, CA, US),
+              and co-founding Ekoru, a sustainable marketplace launching April
+              2026.
             </p>
-
             <p>
-              Passionate about clean architecture and building products that
-              scale. Recently visited Toronto on my honeymoon, exploring
-              immigration opportunities - fell in love with Canada&apos;s tech
-              ecosystem and quality of life.
+              My background is unconventional - I started as a sound engineer
+              working live events. When COVID-19 hit in 2020, the industry
+              collapsed. I pivoted to web development out of necessity, teaching
+              myself everything from HTML to microservices architecture. Four
+              years of intensive learning took me from zero to Software Engineer
+              III at Walmart.
             </p>
-
             <p>
+              Passionate about clean architecture, GraphQL Federation, and
+              building products that scale. Recently visited Toronto on my
+              honeymoon, exploring immigration opportunities - fell in love with
+              Canada&apos;s tech ecosystem and quality of life.
+            </p>
+            <p className="text-sm text-gray-400">
               When not coding: Playing guitar, tinkering with Raspberry Pi
               security projects, or planning the next adventure.
             </p>
@@ -140,34 +148,48 @@ const Portfolio = () => {
               </h3>
               <p className="text-sm text-gray-400 mb-3">Sept 2024 - Present</p>
               <p className="text-gray-300 mb-4">
-                Developing and maintaining Chile market features in shared
-                codebase. Ensuring multi-tenant compatibility across CL, MX, CA,
-                US through comprehensive functional and e2e testing
+                Full-stack development for customer journey (navigation to cart)
+                in shared codebase serving 4 international markets. Led Quantum
+                Metric analytics integration enabling data-driven optimization.
+                Managing monthly production deployments for 50K+ daily users.
               </p>
-              <a
+              <Link
                 href="/work/walmart"
                 className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1 transition-colors"
               >
                 Read more about my work at Walmart →
-              </a>
+              </Link>
             </div>
 
             {/* Ekoru */}
             <div className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
               <h3 className="text-xl font-bold text-cyan-400 mb-1">
-                Co-Founder & Lead Engineer @ Ekoru
+                Co-Founder & Lead Engineer @ EKORU
               </h3>
               <p className="text-sm text-gray-400 mb-3">Apr 2025 - Present</p>
               <p className="text-gray-300 mb-4">
-                Architecting sustainable marketplace with microservices and
-                GraphQL Federation
+                Architecting sustainable marketplace platform as sole developer.
+                Building microservices with NestJS, GraphQL Federation, and
+                PostgreSQL. Implementing environmental impact tracking system
+                using recursive CTEs to calculate sustainability metrics across
+                15+ product categories.
               </p>
-              <a
+              <div className="flex gap-3 mb-4">
+                <Link
+                  href="https://www.ekoru.cl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1 transition-colors"
+                >
+                  Visit Landing Page →
+                </Link>
+              </div>
+              <Link
                 href="/work/ekoru"
                 className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1 transition-colors"
               >
-                Read more about Ekoru →
-              </a>
+                Read technical details →
+              </Link>
             </div>
 
             {/* Agrosat */}
@@ -177,15 +199,18 @@ const Portfolio = () => {
               </h3>
               <p className="text-sm text-gray-400 mb-3">Apr 2023 - Sept 2024</p>
               <p className="text-gray-300 mb-4">
-                Built agricultural analytics dashboards processing 100GB+
-                satellite data
+                Refactored legacy React dashboards from class components to
+                modern hooks. Built React Native mobile apps (Agrobooks) for
+                field data collection with offline-first architecture. Deployed
+                to App Store and Google Play. Implemented real-time GPS tracking
+                with MQTT protocol.
               </p>
-              <a
+              <Link
                 href="/work/agrosat"
                 className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1 transition-colors"
               >
                 Read more →
-              </a>
+              </Link>
             </div>
 
             {/* Freelance */}
@@ -193,17 +218,20 @@ const Portfolio = () => {
               <h3 className="text-xl font-bold text-cyan-400 mb-1">
                 Freelance Full Stack Developer
               </h3>
-              <p className="text-sm text-gray-400 mb-3">Aug 2020 - Apr 2023</p>
+              <p className="text-sm text-gray-400 mb-3"> May 2020 - Apr 2023</p>
               <p className="text-gray-300 mb-4">
-                Delivered custom web applications for various clients. Built
-                responsive SPAs, REST APIs, and integrated third-party services
+                Career transition from sound engineer to developer during
+                COVID-19. Self-taught through intensive study, delivering first
+                client project within 3 months. Collaborated with small
+                freelance team on broker platforms. Worked remotely from Cork,
+                Ireland (2022) while making local tech connections.
               </p>
-              <a
+              <Link
                 href="/work/freelance"
                 className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-1 transition-colors"
               >
-                Read more →
-              </a>
+                Read the full story →
+              </Link>
             </div>
 
             {/* View All Link */}

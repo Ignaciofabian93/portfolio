@@ -1,7 +1,14 @@
 "use client";
-
-import React, { useState } from "react";
-import { Mail, Send, Linkedin, Github, CheckCircle } from "lucide-react";
+import { useState } from "react";
+import {
+  Mail,
+  Send,
+  Linkedin,
+  Github,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+} from "lucide-react";
 import Link from "next/link";
 
 export const MessageFeature: React.FC = () => {
@@ -12,16 +19,45 @@ export const MessageFeature: React.FC = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a backend API
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 3000);
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
+
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      }, 5000);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Failed to send message. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -51,20 +87,33 @@ export const MessageFeature: React.FC = () => {
             <div className="flex flex-col items-center justify-center py-12 text-center">
               <CheckCircle className="text-green-400 mb-4" size={48} />
               <h4 className="text-lg font-semibold text-green-400 mb-2">
-                Message Sent!
+                Message Sent Successfully!
               </h4>
-              <p className="text-gray-400">
+              <p className="text-gray-400 mb-2">
                 Thank you for reaching out. I&apos;ll get back to you soon.
+              </p>
+              <p className="text-gray-500 text-sm">
+                Check your email for a confirmation message.
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {error && (
+                <div className="flex items-start gap-2 p-3 bg-red-500/10 border border-red-500/30 rounded-lg">
+                  <AlertCircle
+                    className="text-red-400 shrink-0 mt-0.5"
+                    size={18}
+                  />
+                  <p className="text-red-400 text-sm">{error}</p>
+                </div>
+              )}
+
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm text-gray-400 mb-1"
                 >
-                  Name
+                  Name *
                 </label>
                 <input
                   type="text"
@@ -73,7 +122,8 @@ export const MessageFeature: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors"
+                  disabled={loading}
+                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -83,7 +133,7 @@ export const MessageFeature: React.FC = () => {
                   htmlFor="email"
                   className="block text-sm text-gray-400 mb-1"
                 >
-                  Email
+                  Email *
                 </label>
                 <input
                   type="email"
@@ -92,7 +142,8 @@ export const MessageFeature: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors"
+                  disabled={loading}
+                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -102,7 +153,7 @@ export const MessageFeature: React.FC = () => {
                   htmlFor="subject"
                   className="block text-sm text-gray-400 mb-1"
                 >
-                  Subject
+                  Subject *
                 </label>
                 <input
                   type="text"
@@ -111,8 +162,9 @@ export const MessageFeature: React.FC = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors"
-                  placeholder="How can I help?"
+                  disabled={loading}
+                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  placeholder="Job opportunity, collaboration, etc."
                 />
               </div>
 
@@ -121,7 +173,7 @@ export const MessageFeature: React.FC = () => {
                   htmlFor="message"
                   className="block text-sm text-gray-400 mb-1"
                 >
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
@@ -129,18 +181,29 @@ export const MessageFeature: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={loading}
                   rows={5}
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors resize-none"
-                  placeholder="Tell me about your project or inquiry..."
+                  className="w-full bg-slate-900/50 border border-slate-600 rounded-lg px-4 py-2 text-gray-100 focus:border-cyan-500 focus:outline-none transition-colors resize-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  placeholder="Tell me about your project or opportunity..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                disabled={loading}
+                className="w-full flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <Send size={18} />
-                Send Message
+                {loading ? (
+                  <>
+                    <Loader2 size={18} className="animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send size={18} />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           )}
@@ -157,12 +220,12 @@ export const MessageFeature: React.FC = () => {
                 <h4 className="text-sm font-semibold text-gray-400 mb-1">
                   Email
                 </h4>
-                <a
+                <Link
                   href="mailto:ignaciofabian93@gmail.com"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   ignaciofabian93@gmail.com
-                </a>
+                </Link>
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-gray-400 mb-1">
@@ -178,7 +241,9 @@ export const MessageFeature: React.FC = () => {
                   Availability
                 </h4>
                 <p className="text-gray-300">Open for new opportunities</p>
-                <p className="text-sm text-gray-400">Full-time • Contract</p>
+                <p className="text-sm text-gray-400">
+                  Full-time • Contract • Visa Sponsorship
+                </p>
               </div>
             </div>
           </div>
@@ -240,8 +305,9 @@ export const MessageFeature: React.FC = () => {
               Quick Response
             </h4>
             <p className="text-sm text-gray-300">
-              I typically respond within 24 hours. For urgent matters, please
-              indicate in the subject line.
+              I typically respond within 24 hours. For urgent matters regarding
+              Canadian job opportunities or visa sponsorship, please indicate in
+              the subject line.
             </p>
           </div>
         </div>
