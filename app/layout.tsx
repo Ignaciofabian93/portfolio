@@ -14,7 +14,7 @@ const siteName = "Ignacio Rodríguez";
 const siteTitle =
   "Ignacio Rodríguez - Full-Stack Software Engineer | Next.js, GraphQL & Microservices Expert";
 const siteDescription =
-  "Senior Full-Stack Software Engineer with 5+ years of experience at Walmart Global Tech. Expert in Next.js, GraphQL Federation, Microservices, and cloud architecture. Co-Founder & CTO at Ekoru. Open to opportunities in Canada (Vancouver/Toronto).";
+  "Full-Stack Software Engineer with 5+ years of experience at Walmart Global Tech. Expert in Next.js, GraphQL Federation, Microservices, and cloud architecture. Co-Founder & CTO at Ekoru. Open to opportunities in Canada (Vancouver/Toronto).";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
