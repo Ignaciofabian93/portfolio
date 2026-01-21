@@ -161,7 +161,7 @@ export default async function Image() {
           left: "80px",
           right: "80px",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "flex-end",
           alignItems: "center",
         }}
       >
