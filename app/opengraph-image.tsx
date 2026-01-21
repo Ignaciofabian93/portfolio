@@ -4,7 +4,8 @@ import { readFile } from "fs/promises";
 import { join } from "path";
 
 // Image metadata
-export const alt = "Ignacio Rodríguez - Full-Stack Software Engineer";
+export const alt =
+  "Ignacio Fabián Rodríguez Rulas - Full-Stack Software Engineer";
 export const size = {
   width: 1200,
   height: 630,
@@ -171,7 +172,7 @@ export default async function Image() {
             fontFamily: "monospace",
           }}
         >
-          ignaciorodriguez.dev
+          https://ignaciorodriguez.dev
         </span>
         <span
           style={{
