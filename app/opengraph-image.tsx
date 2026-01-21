@@ -130,7 +130,7 @@ export default async function Image() {
           gap: "16px",
           flexWrap: "wrap",
           maxWidth: "750px",
-          marginBottom: "80px",
+          marginBottom: "64px",
         }}
       >
         {["Next.js", "GraphQL", "TypeScript", "Microservices", "AWS"].map(
