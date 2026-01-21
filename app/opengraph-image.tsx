@@ -167,15 +167,6 @@ export default async function Image() {
       >
         <span
           style={{
-            color: "#06b6d4",
-            fontSize: "24px",
-            fontFamily: "monospace",
-          }}
-        >
-          https://ignaciorodriguez.dev
-        </span>
-        <span
-          style={{
             color: "#94a3b8",
             fontSize: "24px",
           }}
