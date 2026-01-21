@@ -1,5 +1,6 @@
 import React from "react";
-import { Briefcase, ExternalLink, Github } from "lucide-react";
+import { Briefcase } from "lucide-react";
+import Link from "next/link";
 
 interface Project {
   name: string;
@@ -36,7 +37,7 @@ export const WorkFeature: React.FC = () => {
         "TypeScript",
         "Docker",
       ],
-      status: "Beta Launch Apr 2026",
+      status: "Development",
       statusColor: "yellow",
       link: "https://www.ekoru.cl",
     },
@@ -110,46 +111,35 @@ export const WorkFeature: React.FC = () => {
             key={idx}
             className="bg-slate-800/30 border border-slate-700/50 rounded-lg p-6 hover:border-cyan-500/50 transition-all"
           >
-            <div className="flex justify-between items-start mb-3">
+            <div className="flex flex-col items-start mb-3">
+              <span
+                className={`px-3 py-1 mb-4 border rounded-full text-xs whitespace-nowrap ${getStatusColorClasses(
+                  project.statusColor,
+                )}`}
+              >
+                {project.status}
+              </span>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-1">
                   <h3 className="text-xl font-bold text-cyan-400">
                     {project.name}
                   </h3>
-                  <div className="flex items-center gap-2">
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors"
-                        aria-label="Project Website"
-                      >
-                        <ExternalLink size={16} />
-                      </a>
-                    )}
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-cyan-400 transition-colors"
-                        aria-label="GitHub Repository"
-                      >
-                        <Github size={16} />
-                      </a>
-                    )}
-                  </div>
                 </div>
                 <p className="text-gray-400 text-sm">{project.role}</p>
               </div>
-              <span
-                className={`px-3 py-1 border rounded-full text-xs whitespace-nowrap ${getStatusColorClasses(
-                  project.statusColor
-                )}`}
-              >
-                {project.status}
-              </span>
+              <div className="mt-2">
+                {project.link && (
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-600 hover:text-cyan-400 transition-colors text-sm font-medium"
+                    aria-label="Project Website"
+                  >
+                    Visit Site
+                  </Link>
+                )}
+              </div>
             </div>
 
             <p className="text-gray-300 mb-3 font-medium">

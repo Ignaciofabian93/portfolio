@@ -1,12 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowLeft,
-  Calendar,
-  MapPin,
-  Users,
-  Code,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowLeft, Calendar, MapPin, Users, Code } from "lucide-react";
 import { TerminalHeader } from "../../components/TerminalHeader";
 
 export default function WalmartPage() {
@@ -156,7 +149,6 @@ export default function WalmartPage() {
         {/* Key Project: Quantum Metric */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 text-cyan-400 flex items-center gap-2">
-            <TrendingUp size={24} />
             Featured Project: Quantum Metric Integration
           </h2>
 

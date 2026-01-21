@@ -73,19 +73,19 @@ export default function EkoruPage() {
   const inProgress = [
     {
       feature: "Payment Integration",
-      status: "Planned for October 2026",
+      status: "Planned",
       description:
         "Secure payment processing with Chilean providers (Transbank, Mercado Pago)",
     },
     {
       feature: "Order Management System",
-      status: "In Development",
+      status: "Planned",
       description:
         "End-to-end order processing with status tracking and notifications",
     },
     {
       feature: "Vendor Dashboard",
-      status: "In Development",
+      status: "In progress",
       description: "Complete vendor portal for inventory and sales management",
     },
     {

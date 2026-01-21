@@ -14,15 +14,17 @@ export const ProfileSection: React.FC = () => {
     <article className="space-y-6">
       <div className="relative w-32 h-32">
         <div className="absolute inset-0 bg-linear-to-br from-cyan-400 to-blue-600 rounded-full blur-lg opacity-50"></div>
-        <Image
-          src={imageUrl}
-          width={800}
-          height={800}
-          alt={`${name} Profile`}
-          className="relative w-full h-full rounded-full border-4 border-cyan-500/50 object-cover grayscale"
-          style={{ filter: "grayscale(100%)" }}
-          priority
-        />
+        <div className="relative w-full h-full rounded-full border-4 border-cyan-500/50 overflow-hidden">
+          <Image
+            src={imageUrl}
+            fill
+            sizes="128px"
+            alt={`${name} Profile`}
+            className="object-cover grayscale"
+            style={{ filter: "grayscale(100%)" }}
+            priority
+          />
+        </div>
         <div className="absolute bottom-0 right-0 w-4 h-4 bg-cyan-400 rounded-full border-2 border-slate-900 animate-pulse"></div>
       </div>
 
