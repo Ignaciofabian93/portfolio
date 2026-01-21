@@ -100,10 +100,10 @@ export default async function Image() {
           fontSize: "72px",
           fontWeight: 700,
           color: "#e2e8f0",
-          margin: "0 0 30px 0",
+          margin: "0 0 40px 0",
           letterSpacing: "-2px",
           maxWidth: "850px",
-          lineHeight: 1.1,
+          lineHeight: 1.2,
         }}
       >
         Ignacio Fabián Rodríguez Rulas
